@@ -1,6 +1,7 @@
 import React from "react";
 import { contentRequest } from "../requests/contentRequest";
 import { useState, useEffect } from "react";
+import { baseUrl } from "../requests/baseUrl";
 
 function Account() {
   const [firstName, setFirstName] = useState('user');
@@ -28,7 +29,7 @@ function Account() {
     <div>
       <div>
         <img
-          src={'http://127.0.0.1:8000/static/1.png'}
+          src={`${baseUrl()}${photo}`}
           alt="photoalt"
         />
       </div>

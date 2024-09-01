@@ -1,3 +1,4 @@
+import { baseUrl } from "./baseUrl";
 async function logRequest(data) {
   const options = {
     method: "POST",
@@ -6,7 +7,7 @@ async function logRequest(data) {
   };
 
   const response = await fetch(
-    "http://127.0.0.1:8000/api/token/",
+    `${baseUrl()}api/token/`,
     options
   );
   const result = await response.json();
