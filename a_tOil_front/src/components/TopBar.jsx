@@ -5,11 +5,11 @@ import { NavLink } from "react-router-dom";
 
 function TopBar() {
   return (
-    <div>
-      <img src={logo} alt="" />
+    <div className="flex flex-row p-5  bg-sky-300 sticky top-0 border-spacing-80 rounded-b-lg">
+      <img className=" " src={logo} alt="" />
       <NavLink className="nav-link " to="/account">
-        <div>
-          <img className="icon" src={icon} />
+        <div className="basis-1/4 md:basis-1/3 fixed top-10  right-20">
+          <img className="size-12" src={icon} />
         </div>
       </NavLink>
     </div>

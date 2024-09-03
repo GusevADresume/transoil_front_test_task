@@ -13,11 +13,10 @@ function MainPage() {
 
   useEffect(() => {
     addNews();
-
   }, []);
 
   return (
-    <div>
+    <div className="flex flex-wrap p-10 items-stretch pl-32">
       {newsList.map((object) => {
         return (
           <div key={uuidv4()}>
