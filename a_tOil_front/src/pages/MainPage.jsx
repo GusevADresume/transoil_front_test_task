@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { contentRequest } from "../requests/contentRequest";
 import { NewsCard } from "../components/NewsCard";
 import { v4 as uuidv4 } from "uuid";
+import { CompanyInfo } from "../components/CompanyInfo";
 
 function MainPage() {
   const [newsList, setNewsList] = useState([]);
@@ -16,6 +17,10 @@ function MainPage() {
   }, []);
 
   return (
+    <>
+    <div className="flex justify-center items-center">
+    <CompanyInfo />
+    </div>
     <div className="flex flex-wrap p-10 items-stretch pl-32">
       {newsList.map((object) => {
         return (
@@ -25,6 +30,7 @@ function MainPage() {
         );
       })}
     </div>
+    </>
   );
 }
 
